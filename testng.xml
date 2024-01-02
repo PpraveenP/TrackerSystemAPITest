@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="Employee_Tracker.Utilities.ExtentReportManager"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="D:/API Testing OF Employee Tracker/Employee_Tracker_System_API_Testing">
+        <classes>
+            <class name="Employee_Tracker.Tests.Admin">
+                <methods>
+                    <include name="validating_Admin_Registration"/>
+                    <include name="validating_Admin_Login_with_valid_Data"/>
+                    <include name="validating_Admin_showAllAdmin_Get"/>
+                    <include name="validating_Admin_generate_pdf_Get"/>
+                    <include name="validating_Admin_Get_By_validID"/>
+                    <include name="validating_Admin_Delete_By_validID"/>
+                    <include name="validating_Super_Admin_Update_By_Id"/>
+                    <include name="validating_Admin_Change_Password"/>
+                    <include name="validating_Admin_ForgotPassword"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Admin_Test">
+                <methods>
+                    <include name="validating_Admin_showAllAdmin_Get"/>
+                    <include name="validating_SuperAdminRegister_without_UserName"/>
+                    <include name="validating_SuperAdminRegister_without_EmailID"/>
+                    <include name="validating_SuperAdminRegister_without_contactNumber"/>
+                    <include name="validating_Admin_Login_with_invalid_Username"/>
+                    <include name="validating_Admin_Login_with_invalid_Password"/>
+                    <include name="validating_Admin_Get_By_invalid_ID"/>
+                    <include name="validating_Admin_Delete_By_invalidID"/>
+                    <include name="validating_Super_Admin_Update_By_invalidId"/>
+                    <include name="validating_Admin_Change_Password_without_Username"/>
+                    <include name="validating_Admin_ForgotPassword_with_Invalid_EmailID"/>
+                    <include name="validating_Admin_Delete_By_validID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Attendance">
+                <methods>
+                    <include name="getAllEmployee"/>
+                    <include name="validating_Get_Attendance_Show_List"/>
+                    <include name="validating_Delete_Attendance_By_valid_EMP_ID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Attendance_Test">
+                <methods>
+                    <include name="getAllEmployee"/>
+                    <include name="validating_Attendance_With_Invalid_EmployeeID_Login"/>
+                    <include name="validating_Attendance_With_Employee_Logout_with_invalid_Data"/>
+                    <include name="validating_Get_Attendance_By_invalid_EMPID"/>
+                    <include name="validating_Delete_Attendance_By_invalid_EMP_ID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Client">
+                <methods>
+                    <include name="validating_Client_Registration_with_valid_Data"/>
+                    <include name="validating_Client_Update_By_validID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Country">
+                <methods>
+                    <include name="validating_Get_All_Countries"/>
+                    <include name="validating_Get_Country_By_valid_ID"/>
+                    <include name="validating_Get_CountyInformation_By_CountryName"/>
+                    <include name="validating_Get_All_Country_Names"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Employee">
+                <methods>
+                    <include name="validating_Employee_Registration_With_validData"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Leave_Apply">
+                <methods>
+                    <include name="getAllEmployee"/>
+                    <include name="validating_Apply_Leave_With_validData"/>
+                    <include name="validating_Get_Leave_Application_By_valid_EMPID"/>
+                    <include name="validating_Get_All_Leave_Applications"/>
+                    <include name="validating_Reject_Leave_Application_By_EMP_ID"/>
+                    <include name="validating_Accept_Leave_Application_By_validID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Leave_Apply_Test">
+                <methods>
+                    <include name="getAllEmployee"/>
+                    <include name="validating_Apply_Leave_With_invalidData"/>
+                    <include name="validating_Get_Leave_Application_By_invalid_EMPID"/>
+                    <include name="validating_Reject_Leave_Application_By_EMP_ID"/>
+                    <include name="validating_Accept_Leave_Application_By_invalidID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.State">
+                <methods>
+                    <include name="validating_Get_All_State"/>
+                    <include name="validating_Get_State_By_ID"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Super_Admin">
+                <methods>
+                    <include name="validating_SuperAdminRegister_without_UserName"/>
+                    <include name="validating_SuperAdmin_showSuperAdmin_Get"/>
+                    <include name="validating_SuperAdminRegistration_Without_Email_Id"/>
+                    <include name="validating_SuperAdminRegistration_Without_Contact_numer"/>
+                    <include name="validating_SuperAdminRegistration_Without_PasswordAndConformPassword"/>
+                    <include name="testSuperAdminLogin_With_Invalid_USerName"/>
+                    <include name="testSuperAdminLogin_With_Invalid_Password"/>
+                    <include name="testSuperAdminLogin_Without_UserName"/>
+                    <include name="testSuperAdminLogin_Without_Password"/>
+                    <include name="validating_SuperAdmin_Get_By_invalid_ID"/>
+                    <include name="validating_SuperAdmin_Get_By_Without_ID"/>
+                    <include name="validating_SuperAdmin_Delete_By_invalidId"/>
+                    <include name="validating_SuperAdmin_Delete_By_Without_ID"/>
+                    <include name="validating_Super_Admin_Update_By_Invalid_ID"/>
+                    <include name="validating_SuperAdmin_Delete_By_Id"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Super_Admin_Test">
+                <methods>
+                    <include name="validating_SuperAdminLogin_with_validaData"/>
+                    <include name="validating_SuperAdmin_showSuperAdmin_Get"/>
+                    <include name="validating_SuperAdmin_Get_By_ID"/>
+                    <include name="validating_SuperAdmin_GetAll_Method"/>
+                    <include name="validating_SuperAdmin_Delete_By_Id"/>
+                    <include name="validating_Super_Admin_Update_By_Id"/>
+                    <include name="validating_Super_Admin_Change_Password"/>
+                    <include name="validating_Super_Admin_ForgotPassword"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Tech">
+                <methods>
+                    <include name="validatin_Tech_Registration_With_valid_Data"/>
+                    <include name="validating_Tech_Login_with_validDAta"/>
+                    <include name="validating_Tech_Update_with_ValidData"/>
+                    <include name="validating_Tech_Get_by_validID"/>
+                    <include name="validating_Tech_GetAllDetails"/>
+                    <include name="validating_Tech_Delete_By_validID"/>
+                    <include name="validating_Tech_ChangePassword_with_validData"/>
+                    <include name="validating_Tech_forgotPassword_with_validData"/>
+                </methods>
+            </class>
+            <class name="Employee_Tracker.Tests.Tech_Test">
+                <methods>
+                    <include name="validating_Tech_Registration_Without_UserName"/>
+                    <include name="validating_Tech_GetAllDetails"/>
+                    <include name="validating_Tech_Registration_Without_EmailID"/>
+                    <include name="validating_Tech_Registration_Without_ContactNumber"/>
+                    <include name="validating_Tech_Login_with_invalid_UserName"/>
+                    <include name="validating_Tech_Login_with_invalid_Password"/>
+                    <include name="validating_Tech_Update_with_inValidID"/>
+                    <include name="validating_Tech_Get_by_invalidID"/>
+                    <include name="validating_Tech_Delete_By_invalidID"/>
+                    <include name="validating_Tech_Delete_By_validID"/>
+                    <include name="validating_Tech_ChangePassword_with_invalid_UserName"/>
+                    <include name="validating_Tech_ChangePassword_with_invalid_Password"/>
+                    <include name="validating_Tech_forgotPassword_with_invalid_EmailID"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
